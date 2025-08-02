@@ -1,13 +1,17 @@
-def show_weather(response, city):
-    if response.status_code == 200:
-        data = response.json()
+import streamlit as st
+
+def show_weather(data, city):
+    if data["cod"] == 200:
         temperature = data['main']['temp']
         humidity = data['main']['humidity']
         description = data['weather'][0]['description']
 
-        print(f"\nWeather in {city}: ")
-        print(f"Temperature: {temperature}")
-        print(f"Humidity: {humidity}")
-        print(f"Description: {description}")
+        st.subheader(f"Weather in {city}")
+        st.markdown("### ☁️ Weather Summary")
+        st.table({
+            "Temperature (°C)": [temperature],
+            "Humidity (%)": [humidity],
+            "Conditions": [description]
+        })
     else:
-        print(f"\nWeather in {city} failed with status code: {response.status_code}")
+        st.error("City not found or API error. Please check the city name.")
