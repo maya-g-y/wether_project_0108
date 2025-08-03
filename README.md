@@ -17,44 +17,48 @@ A simple and interactive Streamlit web application that displays detailed weathe
 
 ---
 
-## 🛠️ How to Run
-
+## 🚀 Install & Run via Poetry
+This project uses [Poetry](https://python-poetry.org) for dependency management.
 1. **Clone the repository**
 ```bash
 git clone https://github.com/your-username/weather_project_0108.git
 cd weather_project_0108
 ```
-2. **Install required packages**
+2. **Install Poetry (if you don’t already have it)**
 ```bash
-pip install -r requirements.txt
+pip ipip install poetry
 ```
-3. **Run the application**
+3. **Install dependencies**
 ```bash
-streamlit run app.py
+poetry install
+```
+4. **Run the app**
+```bash
+poetry run streamlit run app.py
 ```
 
 ## 📁Project Structure
 ```bash
 weather_project_0108/
 │
-├── app.py                   # Streamlit app entry point
-├── requirements.txt         # Python dependencies
-├── README.md                # Project description
+├── app.py                 # Main Streamlit entry point
+├── pyproject.toml         # Poetry configuration + dependencies
+├── poetry.lock            # Exact locked versions
+├── README.md              # Project documentation
 │
-├── src/
-│   ├── data.py              # Fetches weather data from API
-│   └── ui.py                # UI logic: display weather, time, map, etc.
+└── src/
+    ├── data.py            # Fetches weather data from the API
+    └── ui.py              # UI logic: display weather, time, map, etc.               # UI logic: display weather, time, map, etc.
 ```
 
 ## 📦Dependencies
+Managed by Poetry in pyproject.toml. Key packages:
 - streamlit
 - requests
 - folium
 - streamlit-folium
 - pytz
 
-
-*All dependencies are listed in requirements.txt*
 
 ## 👩 Author
 Created by Maya Geva. 
