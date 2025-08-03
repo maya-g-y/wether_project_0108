@@ -28,7 +28,7 @@ if submit and city:
             "city": city,
             "temperature": data['main']['temp'],
             "description": data['weather'][0]['description'].capitalize(),
-            "time": datetime.now().strftime("%H:%M")
+            "time": datetime.now().strftime("Searched at: %H:%M")
         })
     else:
         st.error("City not found or API error.")
