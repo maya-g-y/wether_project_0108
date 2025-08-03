@@ -1,7 +1,8 @@
 import streamlit as st
 from datetime import datetime
 from src.data import fetch_weather
-from src.ui import show_weather
+from src.ui import show_weather, get_timezone_by_city
+
 
 st.set_page_config(page_title="Weather Checker", page_icon="🌦️")
 
