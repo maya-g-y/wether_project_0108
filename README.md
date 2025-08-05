@@ -45,7 +45,7 @@ weather_project_0108/
 ├── pyproject.toml         # Poetry configuration + dependencies
 ├── poetry.lock            # Exact locked versions
 ├── README.md              # Project documentation
-│
+├──.gitignore              # Git ignore rules
 └── src/
     ├── data.py            # Fetches weather data from the API
     └── ui.py              # UI logic: display weather, time, map, etc.               # UI logic: display weather, time, map, etc.
